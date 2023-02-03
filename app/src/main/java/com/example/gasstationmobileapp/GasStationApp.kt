@@ -7,13 +7,16 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import com.yandex.mapkit.MapKitFactory
 
 class GasStationApp: Application() {
     lateinit var newsApi: NewsApi
+    private var MAPKIT_API_KEY = "15f9ab7e-e532-4dc0-b701-c9ab368d40a5"
 
 
     override fun onCreate() {
         super.onCreate()
+        MapKitFactory.setApiKey(MAPKIT_API_KEY)
 
         //configureRetrofit()
     }
