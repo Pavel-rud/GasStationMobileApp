@@ -38,14 +38,18 @@ class NewsFragment : Fragment() {
 
         val recyclerViewNews: RecyclerView = binding.recyclerviewNews
         recyclerViewNews.layoutManager = LinearLayoutManager(this.context)
-        recyclerViewNews.adapter = CustomRecyclerNewsAdapter(fillList())
+        recyclerViewNews.adapter = CustomRecyclerNewsAdapter(fillList(), listOf("" +
+                "Подтвердите дату вашу рождения при помощи любого документа, например водительского удостоверения" +
+                " и получите скидку 5%",
+            "К сожалению вынуждены сообщить вам о том, что цены на топливо выросли на 1-2%"))
 
         return root
     }
 
     private fun fillList(): List<String> {
         val data = mutableListOf<String>()
-        (0..30).forEach { i -> data.add("$i element") }
+        data.add("Скидка в День Рождения!")
+        data.add("Подорожание цен")
         return data
     }
 

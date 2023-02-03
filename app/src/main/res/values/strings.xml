@@ -1,6 +1,21 @@
 <resources>
     <string name="app_name">GasStationMobileApp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Карта заправок</string>
+    <string name="title_dashboard">История заказов</string>
     <string name="title_news">Новости</string>
+
+    <string-array name="types_fuel">
+        <item>92</item>
+        <item>95</item>
+        <item>98</item>
+        <item>ДТ</item>
+    </string-array>
+    <string-array name="number_colonka">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
 </resources>

@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gasstationmobileapp.R
 
-class CustomRecyclerNewsAdapter (private val names: List<String>) :
+class CustomRecyclerNewsAdapter (private val names: List<String>, private val descriptions: List<String>) :
     RecyclerView.Adapter<CustomRecyclerNewsAdapter.MyViewHolder>() {
 
 
@@ -25,7 +25,7 @@ class CustomRecyclerNewsAdapter (private val names: List<String>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.nameTextView.text = names[position]
-        holder.descTextView.text = "кот"
+        holder.descTextView.text = descriptions[position]
     }
 
     override fun getItemCount(): Int {

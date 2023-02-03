@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Адрес:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_colonka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Номер колонки:"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_address"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="50dp"
+        android:layout_marginStart="10dp"
+        android:entries="@array/number_colonka"
+        app:layout_constraintStart_toEndOf="@+id/text_colonka"
+        app:layout_constraintTop_toTopOf="@+id/text_colonka" />
+
+    <TextView
+        android:id="@+id/text_fuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вид топлива:"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_colonka"/>
+
+    <Spinner
+        android:id="@+id/spinner_fuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="50dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/text_fuel"
+        app:layout_constraintTop_toTopOf="@+id/text_fuel"
+        android:entries="@array/types_fuel"/>
+
+    <EditText
+        android:id="@+id/edit_count_fuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Количество литров"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_fuel" />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="К оплате:"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_count_fuel"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подтвердить заказ"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_price" />
+
+    <TextView
+        android:id="@+id/text_offer_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Заказ оформлен\n
+Адрес: г. Владивосток, Светланская 55\n
+Колонка: 3\n
+Вид топлива: 95\n
+Объём: 20л\n
+Стоимость: 1000р"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/qrimage"/>
+
+    <ImageView
+        android:id="@+id/qrimage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_qr"
+        android:src="@drawable/qrcode"
+        />
+    <TextView
+        android:id="@+id/text_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Просканируйте qr-code на колонке."
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

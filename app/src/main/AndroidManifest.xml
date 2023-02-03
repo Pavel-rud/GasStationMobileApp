@@ -22,6 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.make_offer.MakeOfferFragment">
+        </activity>
     </application>
 
 </manifest>
